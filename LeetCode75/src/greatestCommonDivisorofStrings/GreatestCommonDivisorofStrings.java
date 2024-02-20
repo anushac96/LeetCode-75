@@ -42,4 +42,4 @@ public class GreatestCommonDivisorofStrings {
 	}
 }
 
-//test commit in git
+//test2 commit in git
