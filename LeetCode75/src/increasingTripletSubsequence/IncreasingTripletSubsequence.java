@@ -7,10 +7,29 @@ public class IncreasingTripletSubsequence {
 		int nums[] = {2,1,5,0,4,6};
 		
 		//bruteforce
-		p.method(nums);
+		System.out.println(p.method1(nums));
+		
+		//optimized with space complexity O(1)
+		System.out.println(p.method2(nums));
 	}
 	
-	public boolean method(int[] nums) {
+	public boolean method2(int[] nums) {
+        int fixedi = Integer.MAX_VALUE;
+        int fixedj = Integer.MAX_VALUE;
+
+        for(int i =0;i<nums.length;i++){
+            if(nums[i]<=fixedi){
+                fixedi = nums[i];
+            }else if(nums[i]<=fixedj){
+                fixedj= nums[i];
+            }else{
+                return true;
+            }
+        }
+        return false;
+    }
+	
+	public boolean method1(int[] nums) {
         int min[] = new int[nums.length];
         int max[] = new int[nums.length];
         int len = nums.length;
