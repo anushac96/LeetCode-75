@@ -7,18 +7,17 @@ public class LongestZigZagPathInABinaryTree {
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1,
 				null,
-				new TreeNode(1,
-						new TreeNode(1),
-						new TreeNode(1,
-								new TreeNode(1,
+				new TreeNode(2,
+						new TreeNode(3),
+						new TreeNode(4,
+								new TreeNode(5,
 										null,
-										new TreeNode(1,
+										new TreeNode(7,
 												null,
-												new TreeNode(1))),
-								new TreeNode(1))));
+												new TreeNode(8))),
+								new TreeNode(6))));
 		LongestZigZagPathInABinaryTree p = new LongestZigZagPathInABinaryTree();
 		System.out.println(p.longestZigZag(root));
-
 	}
 
 	public int longestZigZag(TreeNode root) {
